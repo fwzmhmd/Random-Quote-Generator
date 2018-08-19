@@ -1,6 +1,28 @@
 // FSJS - Random Quote Generator
 
 // Create the array of quote objects and name it quotes
+var quotes = [
+    {
+        quote: 'Be yourself; everyone else is already taken.',
+        source: 'Oscar Wilde'
+    },
+    {
+        quote: 'You know you\'re in love when you can\'t fall asleep because reality is finally better than your dreams.',
+        source: 'Dr. Seuss'
+    },
+    {
+        quote: 'No one can make you feel inferior without your consent.',
+        source: ' Eleanor Roosevelt'
+    },
+    {
+        quote: 'Never go to bed mad. Stay up and fight.',
+        source: 'Phyllis Diller'
+    },
+    {
+        quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+        source: 'Mahatma Gandhi'
+    }
+]
 
 
 
