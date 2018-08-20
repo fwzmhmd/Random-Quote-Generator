@@ -12,7 +12,8 @@ var quotes = [
     },
     {
         quote: 'No one can make you feel inferior without your consent.',
-        source: ' Eleanor Roosevelt'
+        source: 'Eleanor Roosevelt',
+        citation: 'This is My Story'
     },
     {
         quote: 'Never go to bed mad. Stay up and fight.',
@@ -28,7 +29,12 @@ var quotes = [
 
 // Create the getRandomQuuote function and name it getRandomQuote
 
+function getRandomQuote(array) {
+    var randomNum = Math.floor(Math.random() * 4);
+    var randomQuote = quotes[randomNum];
 
+    return randomQuote;
+}
 
 // Create the printQuote funtion and name it printQuote
 
