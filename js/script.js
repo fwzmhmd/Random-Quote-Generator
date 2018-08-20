@@ -65,7 +65,24 @@ function printQuote() {
         }
     }
     document.getElementById('quote-box').innerHTML = empty;
+
+    document.body.style.backgroundColor = randomBg();
 }
+
+// Create a random number from zero to num parameter
+function randomNum(num) {
+    return Math.floor(Math.random() * num) + 1;
+}
+
+// Create and return a random rgb value
+function randomBg() {
+    var rgb = 'rgb(' + randomNum(256) + ',' + randomNum(256) + ',' + randomNum(256) + ')';
+
+    return rgb;
+}
+
+// Auto refresh the quote after 10 seconds
+setInterval(printQuote, 10000);
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
