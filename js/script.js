@@ -7,7 +7,7 @@ var quotes = [
     {
         quote: 'Be yourself everyone else is already taken.',
         source: 'Oscar Wilde',
-        tags: ['be - yourself', 'honesty', 'inspirational']
+        tags: ['be yourself', 'honesty', 'inspirational']
     },
     {
         quote: 'You know you\'re in love when you can\'t fall asleep because reality is finally better than your dreams.',
@@ -58,17 +58,21 @@ function printQuote() {
 
     empty += '<p class="quote">' + randomQuote.quote + '</p>';
     empty += '<p class="source">' +  randomQuote.source;
-    if (randomQuote.citation === undefined) {
-        empty += '</p>';
-    } else {
+
+    if (randomQuote.citation !== undefined) {
         empty += '<span class="citation">' + randomQuote.citation + '</span>';
-        if (randomQuote.year === undefined) {
-            empty += '</p>';
-        } else {
-            empty += '<span class="year">' + randomQuote.year + '</span>';
-            empty += '</p>';
-        }
     }
+
+    if (randomQuote.year !== undefined) {
+        empty += '<span class="year">' + randomQuote.year + '</span>';
+    }
+    
+    if (randomQuote.tags !== undefined) {
+        empty += ' <span class="tags">' + randomQuote.tags.join(', ') + '</span>'
+    } 
+    
+    empty += '</p>';
+
     document.getElementById('quote-box').innerHTML = empty;
 
     document.body.style.backgroundColor = randomBg();
