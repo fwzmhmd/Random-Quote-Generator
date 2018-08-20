@@ -1,9 +1,11 @@
 // FSJS - Random Quote Generator
 
 // Create the array of quote objects and name it quotes
+
+// Quotes in an Array, quotes are stored using objects.
 var quotes = [
     {
-        quote: 'Be yourself; everyone else is already taken.',
+        quote: 'Be yourself everyone else is already taken.',
         source: 'Oscar Wilde'
     },
     {
@@ -28,17 +30,42 @@ var quotes = [
 
 
 // Create the getRandomQuuote function and name it getRandomQuote
-
-function getRandomQuote(array) {
-    var randomNum = Math.floor(Math.random() * 4);
+// Function returns a random quote from the quotes array
+// By generating a random number from zero to the quotes array length and storing in random number variable.
+function getRandomQuote() {
+    var randomNum = Math.floor(Math.random() * quotes.length);
     var randomQuote = quotes[randomNum];
 
     return randomQuote;
 }
 
 // Create the printQuote funtion and name it printQuote
+// printQuote function
+// Stores getRandomQuote function in a variable
+// Create empty string
+// HTML String using empty string
+// Get quote and source from variable that is used to call getRandomQuote function
+// Use conditional statement to check weather citation and year is included in quote objects
+function printQuote() {
+    var randomQuote = getRandomQuote();
 
+    var empty = '';
 
+    empty += '<p class="quote">' + randomQuote.quote + '</p>';
+    empty += '<p class="source">' +  randomQuote.source;
+    if (randomQuote.citation === undefined) {
+        empty += '</p>';
+    } else {
+        empty += '<span class="citation">' + randomQuote.citation + '</span>';
+        if (randomQuote.year === undefined) {
+            empty += '</p>';
+        } else {
+            empty += '<span class="year">' + randomQuote.year + '</span>';
+            empty += '</p>';
+        }
+    }
+    document.getElementById('quote-box').innerHTML = empty;
+}
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
