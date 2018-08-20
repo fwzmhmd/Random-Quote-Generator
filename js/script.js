@@ -6,24 +6,29 @@
 var quotes = [
     {
         quote: 'Be yourself everyone else is already taken.',
-        source: 'Oscar Wilde'
+        source: 'Oscar Wilde',
+        tags: ['be - yourself', 'honesty', 'inspirational']
     },
     {
         quote: 'You know you\'re in love when you can\'t fall asleep because reality is finally better than your dreams.',
-        source: 'Dr. Seuss'
+        source: 'Dr. Seuss',
+        tags: ['dreams', 'love', 'reality', 'sleep']
     },
     {
         quote: 'No one can make you feel inferior without your consent.',
         source: 'Eleanor Roosevelt',
-        citation: 'This is My Story'
+        citation: 'This is My Story',
+        tags: ['confidence', 'inspirational', 'wisdom']
     },
     {
         quote: 'Never go to bed mad. Stay up and fight.',
-        source: 'Phyllis Diller'
+        source: 'Phyllis Diller',
+        tags: ['anger', 'funny', 'sleep']
     },
     {
         quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
-        source: 'Mahatma Gandhi'
+        source: 'Mahatma Gandhi',
+        tags: ['education', 'inspirational', 'learning']
     }
 ]
 
